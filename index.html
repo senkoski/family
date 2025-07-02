@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador Financeiro Familiar</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">Financeiro Familiar</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="expenses.html">Despesas</a></li>
+            <li><a href="allowances.html">Mesadas</a></li>
+            <li><a href="settings.html">Configurações</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="user-name">Usuário</span>
+            <button id="logout-btn" class="btn-secondary">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="balance-summary">
+            <h2>Resumo Financeiro</h2>
+            <div class="balance-card">
+                <div class="balance-amount">
+                    <span class="currency">R$</span>
+                    <span id="total-balance">0,00</span>
+                </div>
+                <div class="balance-details">
+                    <div class="balance-item">
+                        <span class="label">Receitas</span>
+                        <span id="total-income">R$0,00</span>
+                    </div>
+                    <div class="balance-item">
+                        <span class="label">Despesas</span>
+                        <span id="total-expenses">R$0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spending-chart">
+            <h2>Gastos por Categoria</h2>
+            <canvas id="spendingChart"></canvas>
+        </div>
+
+        <div class="recent-transactions">
+            <h2>Transações Recentes</h2>
+            <div class="transaction-list" id="recent-transactions">
+                <!-- Transações serão preenchidas pelo JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

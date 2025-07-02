@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Family Finance Manager</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">Family Finance</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="expenses.html">Expenses</a></li>
+            <li><a href="allowances.html">Allowances</a></li>
+            <li><a href="settings.html" class="active">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main class="settings">
+        <div class="settings-section">
+            <h2>Privacy Settings</h2>
+            <div class="setting-group">
+                <label class="setting-item">
+                    <input type="checkbox" id="share-data" name="share-data">
+                    <span class="setting-label">Share anonymous usage data</span>
+                </label>
+                <label class="setting-item">
+                    <input type="checkbox" id="notifications" name="notifications">
+                    <span class="setting-label">Receive notifications</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>Security Settings</h2>
+            <div class="setting-group">
+                <label class="setting-item">
+                    <input type="checkbox" id="password-protection" name="password-protection">
+                    <span class="setting-label">Enable password protection</span>
+                </label>
+                <label class="setting-item">
+                    <input type="checkbox" id="biometric-auth" name="biometric-auth">
+                    <span class="setting-label">Use biometric authentication</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>Data Management</h2>
+            <button class="btn-secondary" id="clear-data">Clear All Data</button>
+        </div>
+    </main>
+
+    <script src="scripts/settings.js"></script>
+</body>
+</html>

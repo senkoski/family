@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas - Gerenciador Financeiro Familiar</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/expenses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">Financeiro Familiar</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="expenses.html" class="active">Despesas</a></li>
+            <li><a href="allowances.html">Mesadas</a></li>
+            <li><a href="settings.html">Configurações</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="user-name">Usuário</span>
+            <button id="logout-btn" class="btn-secondary">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+        </div>
+    </nav>
+
+    <main class="expenses">
+        <div class="transaction-form">
+            <h2>Adicionar Transação</h2>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label for="amount">Valor</label>
+                    <input type="number" id="amount" name="amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Categoria</label>
+                    <select id="category" name="category" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="food">Alimentação</option>
+                        <option value="transport">Transporte</option>
+                        <option value="education">Educação</option>
+                        <option value="entertainment">Entretenimento</option>
+                        <option value="other">Outros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <input type="text" id="description" name="description" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Data</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="member">Membro da Família</label>
+                    <select id="member" name="member" required>
+                        <option value="">Selecione um membro</option>
+                        <!-- Membros serão preenchidos pelo JavaScript -->
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i> Adicionar Transação
+                </button>
+            </form>
+        </div>
+
+        <div class="transaction-filters">
+            <div class="filter-group">
+                <label for="category-filter">Categoria:</label>
+                <select id="category-filter">
+                    <option value="">Todas</option>
+                    <option value="food">Alimentação</option>
+                    <option value="transport">Transporte</option>
+                    <option value="education">Educação</option>
+                    <option value="entertainment">Entretenimento</option>
+                    <option value="other">Outros</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="member-filter">Membro:</label>
+                <select id="member-filter">
+                    <option value="">Todos</option>
+                    <!-- Membros serão preenchidos pelo JavaScript -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="date-filter">Período:</label>
+                <input type="month" id="date-filter">
+            </div>
+        </div>
+
+        <div class="transaction-list" id="transactions">
+            <!-- Transações serão preenchidas pelo JavaScript -->
+        </div>
+    </main>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/expenses.js"></script>
+</body>
+</html>

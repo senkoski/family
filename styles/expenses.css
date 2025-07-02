@@ -1,0 +1,67 @@
+.transaction-form {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.transaction-list {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#transaction-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.transaction-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.transaction-category {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    text-align: right;
+}
+
+.transaction-date {
+    text-align: right;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Category colors */
+.category-food {
+    color: #ff9800;
+}
+
+.category-transport {
+    color: #9c27b0;
+}
+
+.category-education {
+    color: #4caf50;
+}
+
+.category-entertainment {
+    color: #ff5722;
+}
+
+.category-other {
+    color: #795548;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allowances - Family Finance Manager</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/allowances.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">Family Finance</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="expenses.html">Expenses</a></li>
+            <li><a href="allowances.html" class="active">Allowances</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main class="allowances">
+        <div class="add-kid-form">
+            <h2>Add Kid Profile</h2>
+            <form id="kid-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="allowance">Weekly Allowance</label>
+                    <input type="number" id="allowance" name="allowance" required>
+                </div>
+                <button type="submit" class="btn-primary">Add Kid</button>
+            </form>
+        </div>
+
+        <div class="kid-profiles" id="kid-profiles">
+            <!-- Kid profiles will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <script src="scripts/allowances.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.add-kid-form {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.kid-profiles {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.kid-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.kid-name {
+    font-weight: bold;
+}
+
+.kid-allowance {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.kid-balance {
+    font-weight: 500;
+}
+
+.kid-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.kid-actions button {
+    padding: 0.5rem 1rem;
+}
+
+.kid-actions .btn-pay {
+    background-color: var(--secondary-color);
+}
+
+.kid-actions .btn-pay:hover {
+    background-color: #43a047;
+}
+
+.kid-actions .btn-edit {
+    background-color: var(--accent-color);
+}
+
+.kid-actions .btn-edit:hover {
+    background-color: #42a5f5;
+}
+
+.kid-actions .btn-delete {
+    background-color: #ef5350;
+}
+
+.kid-actions .btn-delete:hover {
+    background-color: #e53935;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .kid-profile {
+        grid-template-columns: 1fr 1fr auto;
+    }
+
+    .kid-allowance,
+    .kid-balance {
+        text-align: right;
+    }
+}
